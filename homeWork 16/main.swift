@@ -13,18 +13,31 @@ import Foundation
  - պետք է սկզբնական արժեքներ տա x, y։ Օրինակ Point(x: 5, y: -8) -> x = 5, y = -8
  - պետք է միայն դրական սկզբնական արժեքներ տա   x, y-ին: Օրինակ Point(x: -5, y: -8) -> x = 5, y = 8
 */
+func modul(_ num: Double) -> Double {
+    if num < 0 {
+       return num * -1
+    }
+    return num
+}
+
 struct Point {
     var x: Double
     var y: Double
-
+    
     init(x: Double, y: Double) {
         self.x = x
         self.y = y
     }
+    
 
     init(x2: Double, y2: Double) {
         self.init(x: abs(x2), y: abs(y2))
     }
+    
+    init(x3: Double, y3: Double) {
+        self.init(x: modul(x3), y: modul(y3))
+    }
+    
 }
 
 var exemp = Point(x: -4, y: -2)
@@ -32,6 +45,9 @@ print(exemp)
 
 var exemp2 = Point(x2: -4, y2: -2)
 print(exemp2)
+
+var exemp3 = Point(x3: -2, y3: -3.3)
+print(exemp3)
 
 //homeWork 16.2
 /*
