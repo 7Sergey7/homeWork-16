@@ -29,7 +29,6 @@ struct Point {
         self.y = y
     }
     
-
     init(x2: Double, y2: Double) {
         self.init(x: abs(x2), y: abs(y2))
     }
@@ -37,7 +36,6 @@ struct Point {
     init(x3: Double, y3: Double) {
         self.init(x: modul(x3), y: modul(y3))
     }
-    
 }
 
 var exemp = Point(x: -4, y: -2)
@@ -224,3 +222,9 @@ class Button: View {
 
 var buttonExemp = Button(frame: Rect(weight: 3, height: 7), titleName: "title")
 print(buttonExemp.isSelected)
+
+
+
+
+
+//
